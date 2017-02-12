@@ -11,7 +11,7 @@ func main() {
 		//Use Euler Formula
 		//Faces =  Edges - Vertices + 2
 		//Vertices can be calculated by the number of gates plus the combination of intersection points
-		vertices := gates +
+		vertices := gates + factorial(gates)
 		n := (gates * (gates - 3)) / 2
 		if n == 0 {
 			totalSectors = gates + 1
@@ -23,7 +23,11 @@ func main() {
 	}
 }
 
+func factorial(n uint64) (result uint64) {
+	if n > 0 {
+		result = n * factorial(n-1)
+		return result
 
-func factorial (n uint64) (result uint64){
-	
+	}
+	return 1
 }
