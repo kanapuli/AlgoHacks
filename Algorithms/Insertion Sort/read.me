@@ -1,0 +1,17 @@
+A Input Array will be given  inputArray = [a1 ,a2,a3,a4,a5 ...]
+Permutations must be done in this array and the output will  be like [a1',a2',a3',a4',a5'..] such that 
+a1'<=a2'<=a3'...
+
+Permutation is nothing but rearranging the numbers in certain order . Insertion sort is to be used 
+
+PsuedoCode:
+input array length n 
+for j => 2 .. n
+    k = j
+    while k = 0
+        if arr[j] < arr [j-1]
+            shift arr[j-1] = arr[j]
+            k--
+    k = j+ 1
+    Run the loop
+            
