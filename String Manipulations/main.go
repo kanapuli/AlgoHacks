@@ -13,6 +13,8 @@ func main() {
 	fmt.Scanf("%s", &word)
 	reversed := reverseWord(word)
 	fmt.Println(reversed)
+	uniqueString := removeDuplicateLiterals(word)
+	fmt.Println(uniqueString)
 }
 
 func reverseWord(input string) (output string) {
@@ -22,5 +24,16 @@ func reverseWord(input string) (output string) {
 		output += splittedChars[i]
 	}
 
+	return output
+}
+func removeDuplicateLiterals(input string) (output string) {
+	dicts := make(map[string]int)
+	for _, character := range strings.Split(input, "") {
+		dicts[character]++
+		if dicts[character] > 1 {
+			continue
+		}
+		output += character
+	}
 	return output
 }
