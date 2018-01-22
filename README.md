@@ -1,2 +1,3 @@
-# hackerearth
-My Solutions to Hackerearth problems
+# Algo Hacks
+
+Find solutions to all algorithmic problems

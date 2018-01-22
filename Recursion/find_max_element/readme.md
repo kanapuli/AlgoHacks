@@ -1,0 +1,1 @@
+A Recursive algorithm to find the maximum element in a sequence .
